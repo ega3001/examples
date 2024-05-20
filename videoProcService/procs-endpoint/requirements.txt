@@ -1,0 +1,9 @@
+celery==5.2.3
+minio
+fastapi
+sqlalchemy
+uvicorn
+python-multipart
+redis
+sqlalchemy
+asyncpg

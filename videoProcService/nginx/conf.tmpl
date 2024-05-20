@@ -1,0 +1,9 @@
+server {
+  listen 0.0.0.0:${PORT};
+  server_name localhost;
+  location /processes {
+      client_max_body_size 1g;
+      rewrite /processes/(.*) /$1 break;
+      proxy_pass http://procs-endpoint:${PROCS_END_PORT};
+  }
+}
